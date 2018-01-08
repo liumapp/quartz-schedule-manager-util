@@ -1,5 +1,6 @@
 package com.liumapp.schedule.util.service;
 
+import com.liumapp.schedule.util.container.JobInfo;
 import org.quartz.JobDetail;
 import org.quartz.SchedulerException;
 import org.quartz.SimpleTrigger;
@@ -9,21 +10,28 @@ import org.quartz.SimpleTrigger;
  * E-mail:liumapp.com@gmail.com
  * home-page:http://www.liumapp.com
  */
-public interface SetSimpleSchedule<O extends Object , J extends JobDetail, G extends SimpleTrigger> {
+public interface SetSimpleSchedule<In extends JobInfo, J extends JobDetail, G extends SimpleTrigger> {
+
+    /**
+     * make name and group name for job and trigger
+     * @param jobInfo your socket pattern
+     * @return Pattern
+     */
+    public JobInfo makeParams (In jobInfo) ;
 
     /**
      * make your job
-     * @param val your object info
+     * @param jobInfo your object info
      * @return JobDetail
      */
-    public JobDetail makeJob (O... val) ;
+    public JobDetail makeJob (In jobInfo) ;
 
     /**
      * make your trigger
-     * @param val your socket pattern
+     * @param jobInfo your object info
      * @return SimpleTrigger
      */
-    public SimpleTrigger makeTrigger (O... val) ;
+    public SimpleTrigger makeTrigger (In jobInfo) ;
 
     /**
      * make your job and trigger together

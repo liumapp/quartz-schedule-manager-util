@@ -19,4 +19,5 @@ public class ScheduleUtilParams {
     public void setAppKey(String appKey) {
         this.appKey = appKey;
     }
+
 }

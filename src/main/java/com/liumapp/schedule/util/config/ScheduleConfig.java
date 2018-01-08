@@ -1,6 +1,6 @@
 package com.liumapp.schedule.util.config;
 
-import com.liumapp.schedule.util.entity.Guest;
+import com.liumapp.schedule.util.tool.WorkerTool;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.impl.StdSchedulerFactory;
@@ -24,16 +24,16 @@ public class ScheduleConfig {
     }
 
     @Bean
-    public Guest guest(ScheduleUtilParams scheduleUtilParams) {
-        Guest guest = new Guest();
-        guest.setAppKey(scheduleUtilParams.getAppKey());
-        return guest;
+    public Scheduler scheduler () throws SchedulerException {
+        Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+        scheduler.start();
+        return scheduler;
     }
 
     @Bean
-    public Scheduler scheduler () throws SchedulerException {
-        Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
-        return scheduler;
+    public WorkerTool workerTool () {
+        WorkerTool workerTool = new WorkerTool();
+        return workerTool;
     }
 
 }
