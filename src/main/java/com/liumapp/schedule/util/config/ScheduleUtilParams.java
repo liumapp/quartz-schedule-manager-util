@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * home-page:http://www.liumapp.com
  */
 @Component
-public class ScheduleParams {
+public class ScheduleUtilParams {
 
     private String appKey;
 
