@@ -13,19 +13,19 @@ import org.springframework.stereotype.Component;
  * home-page:http://www.liumapp.com
  */
 @Configuration
-public class UtilConfig {
+public class ScheduleConfig {
 
     @Bean
-    @ConfigurationProperties(prefix = "liumapp.module.util")
-    public UtilParams utilParams(){
-        UtilParams utilParams = new UtilParams();
-        return utilParams;
+    @ConfigurationProperties(prefix = "liumapp.schedule.util")
+    public ScheduleParams scheduleParams(){
+        ScheduleParams scheduleParams = new ScheduleParams();
+        return scheduleParams;
     }
 
     @Bean
-    public Guest guest(UtilParams utilParams) {
+    public Guest guest(ScheduleParams scheduleParams) {
         Guest guest = new Guest();
-        guest.setAppKey(utilParams.getAppKey());
+        guest.setAppKey(scheduleParams.getAppKey());
         return guest;
     }
 

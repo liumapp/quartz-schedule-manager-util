@@ -15,7 +15,7 @@
 
   <name>quartz-schedule-manager-util</name>
   <url>http://maven.apache.org</url>
-  <description>A lib module for SpringBoot , can not run alone</description>
+  <description>A util module in SpringBoot , help to make quartz schedule jobs</description>
 
   <developers>
     <developer>

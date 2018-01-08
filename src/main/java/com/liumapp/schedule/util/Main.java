@@ -1,6 +1,6 @@
 package com.liumapp.schedule.util;
 
-import com.liumapp.schedule.util.config.UtilConfig;
+import com.liumapp.schedule.util.config.ScheduleConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Import;
  * home-page:http://www.liumapp.com
  */
 @Configuration
-@Import({UtilConfig.class})
+@Import({ScheduleConfig.class})
 public class Main {
 
 
