@@ -1,5 +1,7 @@
 package com.liumapp.schedule.util.container;
 
+import org.quartz.DateBuilder;
+
 /**
  * Created by liumapp on 1/8/18.
  * E-mail:liumapp.com@gmail.com
@@ -12,6 +14,10 @@ public class JobInfo {
     private String triggerName ;
 
     private String groupName ;
+
+    private Integer time;
+
+    private DateBuilder.IntervalUnit unit;
 
     public String getJobName() {
         return jobName;
@@ -35,5 +41,21 @@ public class JobInfo {
 
     public void setGroupName(String groupName) {
         this.groupName = groupName;
+    }
+
+    public Integer getTime() {
+        return time;
+    }
+
+    public void setTime(Integer time) {
+        this.time = time;
+    }
+
+    public DateBuilder.IntervalUnit getUnit() {
+        return unit;
+    }
+
+    public void setUnit(DateBuilder.IntervalUnit unit) {
+        this.unit = unit;
     }
 }
