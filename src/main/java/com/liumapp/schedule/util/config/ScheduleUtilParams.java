@@ -12,6 +12,8 @@ public class ScheduleUtilParams {
 
     private String appKey;
 
+    private boolean useDatabase = false;
+
     public String getAppKey() {
         return appKey;
     }
@@ -20,4 +22,11 @@ public class ScheduleUtilParams {
         this.appKey = appKey;
     }
 
+    public boolean isUseDatabase() {
+        return useDatabase;
+    }
+
+    public void setUseDatabase(boolean useDatabase) {
+        this.useDatabase = useDatabase;
+    }
 }

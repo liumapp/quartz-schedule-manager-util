@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Configuration;
 public class ScheduleConfig {
 
     @Bean
-    @ConfigurationProperties(prefix = "liumapp.schedule.util")
+    @ConfigurationProperties(prefix = "liumapp.schedule")
     public ScheduleUtilParams scheduleUtilParams(){
         ScheduleUtilParams scheduleUtilParams = new ScheduleUtilParams();
         return scheduleUtilParams;
